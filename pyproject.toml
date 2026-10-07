@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sftcheck"
+version = "0.1.0a1"
+description = "The Mines in the Dataset - Chinese-first pre-flight structural auditing for SFT fine-tuning datasets (alpaca/sharegpt/OpenAI dialects)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "cloudydreamland" }]
+keywords = ["sft", "fine-tuning", "dataset", "alpaca", "sharegpt", "llm", "data-quality", "chinese", "audit"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Text Processing",
+]
+
+[project.urls]
+Homepage = "https://github.com/cloudydreamland/Sftcheck"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,7 @@
+include README.en.md
+include CHANGELOG.md
+include DESIGN.md
+include GAP_PROOF.md
+include REPORT.md
+include WORKLOG.md
+recursive-include benchmarks *.py *.md
