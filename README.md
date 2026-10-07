@@ -50,7 +50,8 @@ import json, subprocess, sys, tempfile, os
 p = os.path.join(tempfile.mkdtemp(), 'bad.jsonl')
 open(p, 'w', encoding='utf-8').write(json.dumps({'instruction': 'q'}, ensure_ascii=False))
 proc = subprocess.run([sys.executable, '-m', 'sftcheck', p, '--dialect', 'alpaca'],
-                      capture_output=True, text=True)
+                      capture_output=True, text=True, encoding='utf-8',
+                      env={**os.environ, 'PYTHONIOENCODING': 'utf-8'})
 print('exit:', proc.returncode)
 print('has R010:', 'R010' in proc.stdout)
 "
